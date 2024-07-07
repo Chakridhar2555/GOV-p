@@ -19,28 +19,14 @@
   padding: 0;
 }
 
-.sidebar-menu li {
-  margin-bottom: 10px;
-}
-
-.sidebar-menu li a {
-  display: block;
-  padding: 10px 20px;
-  color: #333;
-  text-decoration: none;
-}
-
-.sidebar-menu li a:hover {
-  background-color: #ddd;
-}
-
 .sidebar-button {
-  background-color: #555;
-  color: #fff;
+  color: black;
   border: none;
   padding: 10px;
   margin-bottom: 10px;
   cursor: pointer;
+  width: 100%;
+  text-align: left;
   transition: background-color 0.3s ease;
 }
 
@@ -50,4 +36,22 @@
 
 .sidebar-button:focus {
   outline: none;
+}
+
+.sidebar-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: inherit;
+  text-decoration: none;
+}
+
+.content {
+  margin-left: 250px;
+  padding: 20px;
+  flex: 1;
+}
+
+.dropdown-menu {
+  width: 100%;
 }
