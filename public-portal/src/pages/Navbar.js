@@ -1,7 +1,15 @@
 import React from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import './Navbar.css'; // Import your Navbar.css for styling
 
 const Navbar = () => {
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    localStorage.removeItem('token'); // Remove token from localStorage
+    navigate('/login'); // Navigate to login page after logout
+  };
+
   return (
     <div className="navbar">
       <div className="center-content">
@@ -21,7 +29,7 @@ const Navbar = () => {
         <div className="profile-section">
           {/* Profile and Logout buttons */}
           <button className="profile-button">Profile</button>
-          <button className="logout-button">Logout</button>
+          <button className="logout-button" onClick={handleLogout}>Logout</button>
         </div>
       </div>
     </div>
