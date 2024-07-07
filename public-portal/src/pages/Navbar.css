@@ -1,0 +1,61 @@
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+  }
+  
+  .logo {
+    width: 50px;
+    height: auto;
+    margin-bottom: 10px; /* Space between logo and search bar */
+  }
+  
+  .center-content {
+    display: flex;
+    flex-direction: column; /* Arrange content in a column */
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .search-bar {
+    display: flex;
+    align-items: center;
+    margin-top: 10px; /* Adjust as needed */
+  }
+  
+  .search-input {
+    padding: 8px;
+    font-size: 16px;
+  }
+  
+  .search-button {
+    padding: 8px 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .profile-section {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px; /* Space between search bar and profile section */
+  }
+  
+  .profile-button,
+  .logout-button {
+    padding: 8px 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .profile-button:hover,
+  .logout-button:hover {
+    background-color: #0056b3;
+  }
+  
