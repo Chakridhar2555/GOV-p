@@ -16,31 +16,38 @@ import Sidebar from "./pages/Sidebar";
 import Navbar from "./pages/Navbar";
 import './App.css';
 
+const AppLayout = () => (
+  <>
+    <Navbar />
+    <div className="main-layout">
+      <Sidebar />
+      <div className="content">
+        <Routes>
+          <Route path="/home" element={<Home />} />
+          <Route path="/feature1" element={<Feature1 />} />
+          <Route path="/feature2" element={<Feature2 />} />
+          <Route path="/feature3" element={<Feature3 />} />
+          <Route path="/feature1/subfeature1" element={<Subfeature1 />} />
+          <Route path="/feature1/subfeature2" element={<Subfeature2 />} />
+          <Route path="/feature1/subfeature3" element={<Subfeature3 />} />
+          <Route path="/submit-report" element={<SubmitReport />} />
+          {/* Add routes for other features */}
+        </Routes>
+      </div>
+    </div>
+  </>
+);
+
 function App() {
   return (
     <Router>
       <div className="App">
-        <Navbar />
-        <div className="main-layout">
-          <Sidebar />
-          <div className="content">
-            <Routes>
-            <Route path="/" element={<Navigate to="/login" />} /> {/* Redirect from / to /login */}
+        <Routes>
+          <Route path="/" element={<Navigate to="/login" />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
-          <Route path="/submit-report" element={<SubmitReport />} />
-          <Route path="/home" element={<Home />} />
-              <Route path="/feature1" element={<Feature1 />} />
-              <Route path="/feature2" element={<Feature2 />} />
-              <Route path="/feature3" element={<Feature3 />} />
-{/* Dropdown */}
-              <Route path="/feature1/subfeature1" element={<Subfeature1 />} />
-              <Route path="/feature1/subfeature2" element={<Subfeature2 />} />
-              <Route path="/feature1/subfeature3" element={<Subfeature3 />} />
-              {/* Add routes for other features */}
-            </Routes>
-          </div>
-        </div>
+          <Route path="/*" element={<AppLayout />} />
+        </Routes>
       </div>
     </Router>
   );
