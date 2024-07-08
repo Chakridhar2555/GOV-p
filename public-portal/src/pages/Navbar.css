@@ -7,10 +7,16 @@
   color: white;
 }
 
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .logo {
-  width: 50px;
+  width: 150px;
   height: auto;
-  margin-bottom: 10px; /* Space between logo and search bar */
+  margin-bottom: 10px; /* Space between logo and profile section */
 }
 
 .center-content {
