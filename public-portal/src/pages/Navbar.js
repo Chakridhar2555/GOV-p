@@ -1,5 +1,7 @@
 import React from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
 import './Navbar.css'; // Import your Navbar.css for styling
 
 const Navbar = () => {
@@ -21,14 +23,14 @@ const Navbar = () => {
             className="logo"
           />
         </div>
-      
+      </div>
+      <div className="profile-section">
+        {/* Profile and Logout icon */}
+        <button className="profile-button">Profile</button>
+        <div className="logout-button" onClick={handleLogout}>
+          <FontAwesomeIcon icon={faSignOutAlt} />
         </div>
-        <div className="profile-section">
-          {/* Profile and Logout buttons */}
-          <button className="profile-button">Profile</button>
-          <button className="logout-button" onClick={handleLogout}>Logout</button>
-        </div>
-     
+      </div>
     </div>
   );
 };
