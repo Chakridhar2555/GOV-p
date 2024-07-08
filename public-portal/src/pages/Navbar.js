@@ -12,6 +12,10 @@ const Navbar = () => {
     navigate('/login'); // Navigate to login page after logout
   };
 
+  const handleProfile = () => {
+    navigate('/profile'); // Navigate to profile page
+  };
+
   return (
     <div className="navbar">
       <div className="center-content">
@@ -26,7 +30,7 @@ const Navbar = () => {
       </div>
       <div className="profile-section">
         {/* Profile and Logout icon */}
-        <button className="profile-button">Profile</button>
+        <button className="profile-button" onClick={handleProfile}>Profile</button>
         <div className="logout-button" onClick={handleLogout}>
           <FontAwesomeIcon icon={faSignOutAlt} />
         </div>

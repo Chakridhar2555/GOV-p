@@ -14,6 +14,7 @@ import Subfeature2 from "./pages/Dropdown/Subfeature2";
 import Subfeature3 from "./pages/Dropdown/Subfeature3";
 import Sidebar from "./pages/Sidebar";
 import Navbar from "./pages/Navbar";
+import Profile from "./pages/Profile"; // Import Profile component
 import './App.css';
 
 const AppLayout = () => (
@@ -31,6 +32,7 @@ const AppLayout = () => (
           <Route path="/feature1/subfeature2" element={<Subfeature2 />} />
           <Route path="/feature1/subfeature3" element={<Subfeature3 />} />
           <Route path="/submit-report" element={<SubmitReport />} />
+          <Route path="/profile" element={<Profile />} /> {/* Add profile route */}
           {/* Add routes for other features */}
         </Routes>
       </div>
