@@ -1,61 +1,65 @@
 .navbar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #333;
-    color: white;
-  }
-  
-  .logo {
-    width: 50px;
-    height: auto;
-    margin-bottom: 10px; /* Space between logo and search bar */
-  }
-  
-  .center-content {
-    display: flex;
-    flex-direction: column; /* Arrange content in a column */
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .search-bar {
-    display: flex;
-    align-items: center;
-    margin-top: 10px; /* Adjust as needed */
-  }
-  
-  .search-input {
-    padding: 8px;
-    font-size: 16px;
-  }
-  
-  .search-button {
-    padding: 8px 12px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .profile-section {
-    display: flex;
-    gap: 10px;
-    margin-top: 10px; /* Space between search bar and profile section */
-  }
-  
-  .profile-button,
-  .logout-button {
-    padding: 8px 12px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .profile-button:hover,
-  .logout-button:hover {
-    background-color: #0056b3;
-  }
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #ececec; /* Light blue background */
+  color: white;
+}
+
+.logo {
+  width: 50px;
+  height: auto;
+  margin-bottom: 10px; /* Space between logo and search bar */
+}
+
+.center-content {
+  display: flex;
+  flex-direction: column; /* Arrange content in a column */
+  justify-content: center;
+  align-items: center;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  margin-top: 10px; /* Adjust as needed */
+}
+
+.search-input {
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ddd; /* Light grey border */
+  border-radius: 4px;
+}
+
+.search-button {
+  padding: 8px 12px;
+  background-color: #34c759; /* Green background */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 5px; /* Space between input and button */
+}
+
+.profile-section {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px; /* Space between search bar and profile section */
+}
+
+.profile-button,
+.logout-button {
+  padding: 8px 12px;
+  background-color: #ff9500; /* Orange background */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.profile-button:hover,
+.logout-button:hover {
+  background-color: #cc7a00; /* Darker orange on hover */
+}

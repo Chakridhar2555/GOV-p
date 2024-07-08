@@ -21,17 +21,14 @@ const Navbar = () => {
             className="logo"
           />
         </div>
-        <div className="search-bar">
-          {/* Search bar component */}
-          <input type="text" placeholder="Search..." className="search-input" style={{ width: '300px' }} />
-          <button className="search-button">Search</button>
+      
         </div>
         <div className="profile-section">
           {/* Profile and Logout buttons */}
           <button className="profile-button">Profile</button>
           <button className="logout-button" onClick={handleLogout}>Logout</button>
         </div>
-      </div>
+     
     </div>
   );
 };
