@@ -7,9 +7,37 @@ const ProfilePage = () => {
   const [oldPassword, setOldPassword] = useState('');
   const [newPassword, setNewPassword] = useState('');
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle form submission logic
+
+    const userId = "60e5e7f44c7f5d001f2ae30f"; // Retrieve this value from your authentication context or state
+
+    try {
+      const response = await fetch('http://localhost:5001/profile', {  // Updated port to 5001
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          userId,
+          name,
+          email,
+          oldPassword,
+          newPassword,
+        }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        alert('Profile updated successfully');
+      } else {
+        alert(`Error: ${data.message}`);
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      alert('Failed to fetch. Please check the console for more details.');
+    }
   };
 
   return (

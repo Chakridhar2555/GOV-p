@@ -23,6 +23,9 @@ app.use('/auth', authRoutes);
 const reportRoutes = require('./routes/report');
 app.use('/reports', reportRoutes);
 
+const profileRoutes = require('./routes/profile');
+app.use('/profile', profileRoutes);
+
 app.listen(process.env.PORT, () => {
   console.log(`Server running on port ${process.env.PORT}`);
 });
