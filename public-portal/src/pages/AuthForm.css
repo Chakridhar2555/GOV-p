@@ -1,23 +1,28 @@
-/* AuthForm.css */
+body {
+  background: url('https://wallpapers.com/images/featured/janasena-party-qxbqux4yll4ut0yp.jpg') no-repeat center center fixed;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
 
 .auth-container {
-  width: 100%; /* Adjust width as needed */
+  width: 100%;
   max-width: 400px;
-  margin: 20px auto; /* Centering the container horizontally and adding top margin */
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  background-color: #fff;
+  margin: 100px auto; /* Added more top margin for better spacing */
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.9); /* Added semi-transparent background for readability */
+  text-align: center;
 }
 
 .logo-container {
-  text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .logo {
-  max-width: 100%;
+  max-width: 80%;
   height: auto;
 }
 
@@ -28,9 +33,16 @@
 
 .auth-form input,
 .auth-form button {
-  margin-bottom: 10px;
-  padding: 10px;
+  margin-bottom: 15px;
+  padding: 12px;
   font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.auth-form input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
 
 .auth-form button {
@@ -38,10 +50,12 @@
   color: #fff;
   border: none;
   cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .auth-form button:hover {
   background-color: #0056b3;
+  transform: translateY(-2px);
 }
 
 .create-account-button {
@@ -49,12 +63,15 @@
   color: #fff;
   border: none;
   cursor: pointer;
-  padding: 10px;
+  padding: 12px;
   font-size: 16px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .create-account-button:hover {
   background-color: #218838;
+  transform: translateY(-2px);
 }
 
 /* Toast container customization */
@@ -63,7 +80,7 @@
 }
 
 .Toastify__toast {
-  border-radius: 5px;
+  border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 

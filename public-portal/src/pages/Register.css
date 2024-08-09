@@ -1,67 +1,80 @@
-/* Register.css */
+body {
+  background: url('https://wallpapers.com/images/featured/janasena-party-qxbqux4yll4ut0yp.jpg') no-repeat center center fixed;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
 
 .register-container {
-    width: 100%; /* Adjust width as needed */
-    max-width: 400px;
-    margin: 20px auto; /* Centering the container horizontally and adding top margin */
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
-  }
-  
-  .logo {
-    display: block;
-    max-width: 100%;
-    height: auto;
-    margin: 0 auto 20px;
-  }
-  
-  .register-form {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .register-form input,
-  .register-form button {
-    margin-bottom: 10px;
-    padding: 10px;
-    font-size: 16px;
-  }
-  
-  .register-form button {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .register-form button:hover {
-    background-color: #0056b3;
-  }
-  
-  /* Toast container customization */
-  .Toastify__toast-container {
-    font-size: 16px;
-  }
-  
-  .Toastify__toast {
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .Toastify__toast--success {
-    background-color: #28a745;
-    color: #fff;
-  }
-  
-  .Toastify__toast--error {
-    background-color: #dc3545;
-    color: #fff;
-  }
-  
-  .Toastify__close-button {
-    color: #fff;
-  }
-  
+  width: 100%;
+  max-width: 400px;
+  margin: 100px auto; /* Added more top margin for better spacing */
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.9); /* Added semi-transparent background for readability */
+  text-align: center;
+}
+
+.logo {
+  max-width: 80%;
+  height: auto;
+  margin-bottom: 30px;
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.register-form input,
+.register-form button {
+  margin-bottom: 15px;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.register-form input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.register-form button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.register-form button:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+/* Toast container customization */
+.Toastify__toast-container {
+  font-size: 16px;
+}
+
+.Toastify__toast {
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.Toastify__toast--success {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.Toastify__toast--error {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.Toastify__close-button {
+  color: #fff;
+}

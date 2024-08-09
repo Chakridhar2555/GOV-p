@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import Login from "./pages/Login";
@@ -14,13 +14,13 @@ import Subfeature2 from "./pages/Dropdown/Subfeature2";
 import Subfeature3 from "./pages/Dropdown/Subfeature3";
 import Sidebar from "./pages/Sidebar";
 import Navbar from "./pages/Navbar";
-import Profile from "./pages/Profile"; // Import Profile component
+import Profile from "./pages/Profile";
 import './App.css';
 
 const AppLayout = () => (
   <>
     <Navbar />
-    <div className="main-layout">
+    <div className="main-content">
       <Sidebar />
       <div className="content">
         <Routes>
@@ -33,26 +33,34 @@ const AppLayout = () => (
           <Route path="/feature1/subfeature3" element={<Subfeature3 />} />
           <Route path="/submit-report" element={<SubmitReport />} />
           <Route path="/profile" element={<Profile />} /> {/* Add profile route */}
-          {/* Add routes for other features */}
         </Routes>
       </div>
     </div>
   </>
 );
 
-function App() {
-  return (
-    <Router>
-      <div className="App">
-        <Routes>
-          <Route path="/" element={<Navigate to="/login" />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/*" element={<AppLayout />} />
-        </Routes>
-      </div>
-    </Router>
-  );
-}
+const App = () => {
+  const location = useLocation();
+  
+  // Determine if we are on the login or register page
+  const isAuthPage = location.pathname === '/login' || location.pathname === '/register';
 
-export default App;
+  return (
+    <div className={`App ${isAuthPage ? 'auth-background' : ''}`}>
+      <Routes>
+        <Route path="/" element={<Navigate to="/login" />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/*" element={<AppLayout />} />
+      </Routes>
+    </div>
+  );
+};
+
+const AppWithRouter = () => (
+  <Router>
+    <App />
+  </Router>
+);
+
+export default AppWithRouter;
