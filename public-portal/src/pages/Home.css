@@ -1,36 +1,79 @@
-/* Home.css */
-
+/* Container styling */
 .home-container {
   display: flex;
   flex-direction: column;
   height: 100vh; /* Adjust height as needed */
+  background: linear-gradient(120deg, #f0f0f0, #e6e6e6);
+  font-family: Arial, sans-serif;
 }
 
+/* Main content styling */
 .main-content {
   flex: 1; /* Takes remaining vertical space */
   padding: 20px; /* Adjust padding as needed */
   position: relative; /* Ensure positioning for absolute elements */
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  transition: box-shadow 0.3s ease;
 }
 
+.main-content:hover {
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Profile section styling */
 .profile-section {
   position: absolute;
   top: 20px; /* Adjust top position as needed */
   right: 20px; /* Adjust right position as needed */
+  display: flex;
+  align-items: center;
 }
 
+/* Button styling */
 .profile-button,
 .logout-button {
   margin-left: 10px; /* Adjust margin between buttons */
-  padding: 8px 16px; /* Adjust padding as needed */
+  padding: 10px 20px; /* Adjust padding as needed */
   font-size: 14px; /* Adjust font size */
   border: none;
-  background-color: #007bff;
+  background: linear-gradient(145deg, #007bff, #0056b3);
   color: white;
-  border-radius: 4px;
+  border-radius: 8px;
   cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .profile-button:hover,
 .logout-button:hover {
-  background-color: #0056b3;
+  background: linear-gradient(145deg, #0056b3, #003f7f);
+  transform: translateY(-2px);
+}
+
+/* Add subtle shadow on button focus */
+.profile-button:focus,
+.logout-button:focus {
+  outline: none;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 600px) {
+  .main-content {
+    margin: 10px;
+    padding: 15px;
+  }
+
+  .profile-section {
+    top: 10px;
+    right: 10px;
+  }
+
+  .profile-button,
+  .logout-button {
+    font-size: 12px;
+    padding: 8px 16px;
+  }
 }

@@ -1,28 +1,31 @@
-/* styles.css */
-
 /* Container styling */
 .feature-container {
   max-width: 600px;
   margin: 0 auto;
   padding: 20px;
-  background-color: #f0f0f0;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(145deg, #ffffff, #e6e6e6);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-container:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
 }
 
 /* Form styling */
 .feature-form {
   display: flex;
   flex-direction: column;
-}
-
-.feature-form div {
-  margin-bottom: 15px;
+  gap: 20px; /* Use gap for better spacing between form elements */
 }
 
 /* Label styling */
 .feature-form label {
-  font-weight: bold;
+  font-weight: 600;
+  color: #333;
+  font-size: 14px;
 }
 
 /* Input styling */
@@ -32,27 +35,39 @@
 .feature-form textarea,
 .feature-form select {
   width: 100%;
-  padding: 10px;
+  padding: 12px;
   font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
   box-sizing: border-box;
   margin-top: 5px;
+  background-color: #f9f9f9;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-form input:focus,
+.feature-form textarea:focus,
+.feature-form select:focus {
+  border-color: #4caf50;
+  box-shadow: 0 0 8px rgba(76, 175, 80, 0.3);
+  outline: none;
 }
 
 /* Submit button styling */
 .feature-form button[type='submit'] {
   background-color: #4caf50;
   color: white;
-  padding: 12px 20px;
+  padding: 14px 20px;
   border: none;
-  border-radius: 4px;
+  border-radius: 8px;
   cursor: pointer;
   font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .feature-form button[type='submit']:hover {
   background-color: #45a049;
+  transform: translateY(-2px);
 }
 
 /* Responsive adjustments */
@@ -61,4 +76,14 @@
     width: 90%;
     margin: 10px auto;
   }
+}
+
+/* Optional: Add subtle animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.feature-container {
+  animation: fadeIn 0.6s ease;
 }
